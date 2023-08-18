@@ -17,6 +17,7 @@ class NewsApiService {
       queryParameters: {
         "country": country,
         "category": category,
+        "pageSize": 100,
       },
     );
     ArticleModel articleModel = ArticleModel.fromJson(response.data);

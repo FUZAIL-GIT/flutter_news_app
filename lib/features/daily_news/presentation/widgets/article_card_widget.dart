@@ -25,7 +25,7 @@ class ArticleCard extends StatelessWidget {
         children: [
           CachedNetworkImage(
             height: 200,
-            width: 150,
+            width: constraints.maxWidth * 0.3,
             imageUrl:
                 article.urlToImage ?? 'http://via.placeholder.com/350x150',
             imageBuilder: (context, imageProvider) => Container(
@@ -66,22 +66,15 @@ class ArticleCard extends StatelessWidget {
                     color: Colors.grey.shade700,
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const Icon(CupertinoIcons.profile_circled),
-                    Text(
-                      article.author ?? '',
-                      maxLines: 4,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.grey.shade700,
-                      ),
-                    ),
-                  ],
+                Text(
+                  article.author ?? '',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
+                  ),
                 ),
               ],
             ),
