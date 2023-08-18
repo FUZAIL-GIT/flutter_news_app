@@ -1,20 +1,29 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_news_app/core/api/api_config.dart';
 import 'package:flutter_news_app/features/daily_news/data/models/article_model.dart';
+import 'package:flutter_news_app/injection_container.dart';
 import 'package:retrofit/retrofit.dart';
 
-part 'news_api_service.g.dart';
+import '../../../../../core/resources/api_helper.dart';
 
-@RestApi(baseUrl: ApiConfig.baseUrl)
-abstract class NewsApiService {
-  factory NewsApiService(Dio dio) = _NewsApiService;
-
-  // method to request news articles from server
-  // set the retrofit parameters
-  @GET(ApiConfig.getNewsUrl)
-  Future<HttpResponse<List<ArticleModel>>> getNewsArticles({
-    @Query('apikey') String? apiKey,
-    @Query('country') String? country,
-    @Query('category') String? category,
-  });
+class NewsApiService {
+  Future<HttpResponse<List<Article>>> getNewsArticles(
+      {required String apiKey,
+      required String country,
+      required String category}) async {
+        
+    Response response = await serviceLocator<ApiHelper>().getRequest(
+      endPoint: ApiConfig.getNewsUrl,
+      queryParameters: {
+        "country": country,
+        "category": category,
+      },
+    );
+    ArticleModel articleModel = ArticleModel.fromJson(response.data);
+    HttpResponse<List<Article>> httpResponse =
+        HttpResponse(articleModel.articles, response);
+    return httpResponse;
+  }
 }
+
+

@@ -140,6 +140,18 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "connectivity_plus",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/connectivity_plus-4.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "connectivity_plus_platform_interface",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/connectivity_plus_platform_interface-1.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "convert",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/convert-3.1.1",
       "packageUri": "lib/",
@@ -162,6 +174,12 @@
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/dart_style-2.3.2",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "dbus",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/dbus-0.7.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
     },
     {
       "name": "dio",
@@ -254,10 +272,34 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "flutter_screenutil",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/flutter_screenutil-5.8.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_spinkit",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/flutter_spinkit-5.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Volumes/Software/tools/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Volumes/Software/tools/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "fluttertoast",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/fluttertoast-8.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "frontend_server_client",
@@ -374,6 +416,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "nm",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/nm-0.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "octo_image",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/octo_image-1.0.2",
       "packageUri": "lib/",
@@ -426,6 +474,12 @@
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "petitparser",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/petitparser-5.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "platform",
@@ -650,6 +704,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "xml",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/xml-6.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "yaml",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/yaml-3.1.2",
       "packageUri": "lib/",
@@ -662,7 +722,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-08-17T08:52:37.252863Z",
+  "generated": "2023-08-18T09:41:28.390288Z",
   "generator": "pub",
   "generatorVersion": "3.0.6"
 }

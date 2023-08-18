@@ -1,5 +1,5 @@
+import 'dart:developer';
 import 'dart:io';
-
 import 'package:dio/dio.dart';
 import 'package:flutter_news_app/core/api/api_config.dart';
 import 'package:flutter_news_app/core/resources/data_state.dart';
@@ -11,13 +11,15 @@ class ArticleRepositoryImple implements ArticleRepository {
   final NewsApiService _newsApiService;
   ArticleRepositoryImple(this._newsApiService);
   @override
-  Future<DataState<List<ArticleModel>>> getNewsArticles() async {
+  Future<DataState<List<Article>>> getNewsArticles() async {
+    
     try {
       final httpResponse = await _newsApiService.getNewsArticles(
         apiKey: ApiConfig.apiKey,
         category: ApiConfig.categoryQuery,
         country: ApiConfig.countryQuery,
       );
+      log(httpResponse.response.statusCode.toString());
       if (httpResponse.response.statusCode == HttpStatus.ok) {
         return DataSuccess(httpResponse.data);
       } else {
@@ -31,6 +33,7 @@ class ArticleRepositoryImple implements ArticleRepository {
         );
       }
     } on DioException catch (e) {
+      log('', error: e.error);
       return DataFailed(e);
     }
   }

@@ -1,5 +1,7 @@
 // ignore_for_file: invalid_use_of_visible_for_testing_member
 
+import 'dart:developer';
+
 import 'package:flutter_news_app/features/daily_news/domain/usecases/get_article.dart';
 import 'package:flutter_news_app/features/daily_news/presentation/bloc/remote/remote_article_event.dart';
 import 'package:flutter_news_app/features/daily_news/presentation/bloc/remote/remote_article_state.dart';
@@ -14,7 +16,7 @@ class RemoteArticleBloc extends Bloc<RemoteArticleEvent, RemoteArticleState> {
       : super(const RemoteArticleLoading()) {
     on<GetArticles>(onGetArticles);
   }
-
+                                
   void onGetArticles(
       GetArticles event, Emitter<RemoteArticleState> emitter) async {
     DataState<List<ArticleEntity>> dataState = await _getArticleUseCase.call();
@@ -26,9 +28,11 @@ class RemoteArticleBloc extends Bloc<RemoteArticleEvent, RemoteArticleState> {
         RemoteArticleSuccess(dataState.data!),
       );
     } else if (dataState is DataFailed) {
+      log('', error: dataState.error);
       emit(
         RemoteArticleFailed(dataState.error!),
       );
     }
   }
+  
 }

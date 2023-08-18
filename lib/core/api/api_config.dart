@@ -3,5 +3,5 @@ class ApiConfig {
   static const String getNewsUrl = '/top-headlines';
   static const String apiKey = 'cd429a45dcd04da09a81ea93db9b7159';
   static const String countryQuery = 'us';
-  static const String categoryQuery = 'general';
+  static const String categoryQuery = 'technology';
 }
